@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <meta name="author" content="Clément Lazzarini">
+
+    <!-- To Modify -->
+    <title>Sakhir - F1 2022</title>
+    <meta name="description" content="Découvrez toutes les infos de la formule 1!">
+
+
+    <!-- Social Meta to Modify -->
+    <meta property="og:title" content="Titre_de_la_page">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.sitepoint.com/a-basic-html5-template/">
+    <meta property="og:description" content="Il s'agit d'une simple description de la page web.">
+    <meta property="og:image" content="image.png">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar dark-mode" role="navigation">
+            <div></div>
+            <a href="index.html"  class="navbar__logo"><div class="title">Formule 1</br>2022</div></a>    
+            <ul class="navbar__links">
+              <li class="navbar__link first"><a href="index.html">Accueil</a></li>
+              <li class="navbar__link second"><a href="pilotes.html">Pilotes</a></li>
+              <li class="navbar__link third"><a href="ecuries.html">Ecuries</a></li>
+              <li class="navbar__link four"><a href="circuits.html">Circuits</a></li>
+              <li class="navbar__link fifth"><a href="classements.html">Classements</a></li>
+            </ul>   
+            <button class="burger">
+              <span class="bar"></span>  
+            </button>   
+          </nav>
+    </header>
+    <main class="main-desc-circuit">
+        <div class="first-circuit">
+            <h2>Sakhir</h2>
+            <div class="img-circuit sakhir"></div>
+        </div>
+        </div>
+        <div class="second-circuit">
+            <div class="first-third-pilote">
+                <h3>Informations</h3>
+                <ul>
+                    <li><p>Nombre de tours</p><p>57</p></li>
+                    <li><p>Longueur du circuit</p><p>5,412 km</p></li>
+                    <li><p>Distance de course</p><p>308,238 km</p></li>
+                    <li><p>Dernier vainqueur</p><p>Lewis Hamilton</p></li>
+                </ul>
+            </div>
+            <div class="second-third-pilote">
+                <h3>Classement nombres de victoires par pilote</h3>
+                <ul>
+                    <li><p>4 victoires - Lewis Hamilton</p></li>
+                    <li><p>4 victoires - Sebastian Vettel</p></li>
+                    <li><p>3 victoires - Fernando Alonso</p></li>
+
+                </ul>
+            </div>
+            <div class="third-third-pilote">
+                <h3>Faits</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat adipisci soluta ratione voluptates deserunt culpa quae suscipit ex earum! Eos, eveniet rem. Consectetur quae rerum labore fugit sapiente ex eveniet voluptas temporibus, error reprehenderit debitis possimus et quod ipsa magnam mollitia obcaecati totam fuga eos beatae id! Excepturi, culpa sed!</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Créé par Clément Lazzarini</p>
+        <a href="#">Help & Infos</a>
+    </footer>
+    <script defer>
+        function toggleMenu () {  
+          const navbar = document.querySelector('.navbar');
+          const burger = document.querySelector('.burger');
+          burger.addEventListener('click', (e) => {    
+          navbar.classList.toggle('show-nav');
+          });    
+        }
+        toggleMenu();
+      </script>
+</body>
+</html>

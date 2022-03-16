@@ -1,0 +1,761 @@
+/*-----------------------------------
+Author: Clément Lazzarini
+Contact: clement.lazzarini71@gmail.com
+Description: 
+Work Time: 
+Date: 
+------------------------------------*/
+
+/*-----------------------------------
+            Add Fonts
+------------------------------------*/
+@font-face {
+    font-family: "Formula1";
+    src: url("fonts/Formula1-Regular.ttf") format("ttf"),
+}
+
+/*-----------------------------------
+        General Properties
+------------------------------------*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #FFF;
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 16px;
+    font-family: 'Formula1';
+}
+
+body{
+    background-color: #E4E4E4;
+}
+
+.light-mode {
+    --navbar-color: #FFF;
+    --navbar-bg-color: #000;  
+}
+.dark-mode {
+    --navbar-color: #FFF;
+    --navbar-bg-color: #000;  
+  }
+  
+
+/*-----------------------------------
+                Header
+------------------------------------*/
+header{
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    height: 7.6vh;
+    background-color: #000;
+    z-index: 1;
+}
+
+.navbar {  
+    display:flex;
+    align-items:center; 
+    justify-content:space-between;   
+    padding:1rem;
+    font-size:1.1rem;
+    background:var(--navbar-bg-color);
+    color:var(--navbar-color);
+    height: 7.6vh;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+
+.navbar__links { 
+    display:flex; 
+    padding-top: 3rem; 
+}
+.navbar__link { 
+    padding:0 1rem;
+}
+.navbar__link > a { 
+    color:var(--navbar-color);
+    text-decoration:none;
+}
+.navbar__link:hover{
+    color: #E72E93;
+}
+.burger {
+    display:none;
+}
+
+.title{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: 1.5rem;
+    margin-top: 0.2rem;
+    text-align: center;
+    font-weight: 400;
+}
+
+.diapo{
+    margin-top: 4rem;
+    background: url('img/ferrari-barcelone-test.jpeg') no-repeat center center / contain;
+    height: 17rem;
+    width: 100%;
+}
+#slider {
+    width: 100%; 
+    overflow: hidden;
+    margin-top: 4rem;
+}
+
+#slider figure {
+    position: relative; 
+    width: 400%;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    animation: 10s slidy infinite;
+  }
+
+#slider figure img { 
+    width: 25%; 
+    height: auto; 
+    float: left; }
+
+
+/*-----------------------------------
+                Main
+------------------------------------*/
+main{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.maingrid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.mainbtn{
+    background-color: #000;
+    width: 90%;
+    height: 16rem;
+    border-radius: 1rem;
+    border: 0rem;
+    position: relative;
+    margin-left: 5%;
+}
+
+.mainbtnbis{
+    background-color: #000;
+    margin-left: 2.5%;
+    width: 95%;
+    height: 8rem;
+    border-radius: 0.5rem;
+    border: 0rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.mainbtntext{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.mainbtntextbis{
+    padding-top: 3.5rem;
+    text-align: center;
+}
+
+.mainbtnimg{
+    height: 8rem;
+    width: 80%;
+    margin: 0 0 2rem 10%;
+}
+
+.imgbtnpilote{
+    background: url('img/f1-helmet.png') no-repeat center center / contain;
+    transform: scale(1.1);
+}
+
+.imgbtnecuries{
+    background: url('img/outils.png') no-repeat center center / contain;
+    margin-left: 10%;
+}
+
+.imgbtncircuits{
+    background: url('img/circuit.png') no-repeat center center / contain;
+    transform: scale(1.1);
+}
+
+.imgbtnclassements{
+    background: url('img/podium.png') no-repeat center center / contain;
+}
+
+.imgbtncalendrier{
+    background: url('img/calendrier.png') no-repeat center center / contain;
+    margin-top: 2rem;
+    height: 4rem;
+    width: 18%;
+}
+
+/*-----------------------------------
+                Main Level 2
+------------------------------------*/
+.main-pilotes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 4rem;
+}
+.button-pilotes{
+    height: 5rem;
+    width: 95%;
+    margin: 1rem 0 0 2.5%;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 1.5rem;
+}
+
+.button-pilotes p{
+    font-size: 1.9rem;
+}
+
+.mercedes-btn{
+    background-color: #00D2BE;
+}
+
+.redbull-btn{
+    background-color: #0600EF;
+}
+
+.ferrari-btn{
+    background-color: #DC0000;
+}
+
+.mclaren-btn{
+    background-color: #FF8700;
+}
+
+.aston-btn{
+    background-color: #006F62;
+}
+
+.alpha-btn{
+    background-color: #2B4562;
+}
+
+.alfa-btn{
+    background-color: #900000;
+}
+
+.alpine-btn{
+    background-color: #0090FF;
+}
+
+.williams-btn{
+    background-color: #005AFF;
+}
+
+.haas-btn{
+    background-color: #FFF;
+}
+
+.haas-btn p{
+    color: #000;
+}
+
+.circuit-btn{
+    background-color: #000;
+}
+
+.main-classements{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 89.4vh;
+    margin-top: 7.6vh;
+}
+
+.button-classements{
+    background-color: #000;
+    height: 40vh;
+    width: 95%;
+    margin: 0 2.5%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.button-classements-c{
+    background-color: #000;
+    height: 40vh;
+    width: 95%;
+    margin: 0 2.5%;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.button-classements p, .button-classements-c p{
+    font-size: 2rem;
+}
+
+.btn-class-pilotes{
+    background: url('img/f1-helmet.png') no-repeat center center / contain;
+    height: 70%;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.btn-class-ecuries{
+    background: url('img/outils.png') no-repeat center center / contain;
+    height: 60%;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 1rem;
+}
+
+.btn-class-ecuries p{
+    color: red;
+}
+
+.main-calendrier{
+    margin-top: 4rem;
+}
+
+.btn-calendrier{
+    display: flex;
+    justify-content: space-between;
+    background-color: #000;
+    height: 5rem;
+    width: 95%;
+    margin: 1rem 0 0 2.5%;
+    border-radius: 10px;
+    text-align: center;
+    border: 0;
+}
+
+.calendrier-date{
+    padding-right: 1rem;
+    border-right: #FFF 2px solid;
+}
+
+.calendrier-nom{
+    width: 55%;
+}
+
+.btn-calendrier p{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.calendrier-nom, .calendrier-date{
+    margin: auto;
+}
+/*-----------------------------------
+                Main Level 3
+------------------------------------*/
+.main-desc-pilotes{
+    margin-top: 7.6vh;
+    height: 89.4vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-desc-pilotes p{
+    color: #000;
+}
+
+.first-pilote{
+    height: 25vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.img-pilote{
+    height: 20vh;
+    width: 20vh;
+    border-radius: 50%;
+    background-color: #006F62;
+    aspect-ratio: 1/1;
+    margin: auto;
+}
+
+.lewis{
+    background: url('img/hamilton.jpg') no-repeat center center / cover;
+
+}
+
+.name-pilote{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.name-pilote h2{
+    color: #000;
+    font-size: 1.6rem;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.england-flag{
+    background: url('img/england.png') no-repeat center center / cover;
+    height: 4rem;
+    width: 6rem;
+    border-radius: 10px;
+}
+
+.second-pilote{
+    display: flex;
+    justify-content: space-around;
+    margin-top: -2rem;
+}
+
+.second-pilote p{
+    text-align: center;
+}
+
+.first-second-pilote, .second-second-pilote, .third-second-pilote{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.first-second-pilote-img{
+    background: url('img/first-place.png') no-repeat center center / cover;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.second-second-pilote-img{
+    background: url('img/crown.png') no-repeat center center / cover;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.third-second-pilote-img{
+    background: url('img/stopwatch.png') no-repeat center center / cover;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.third-pilote{
+    width: 90%;
+    margin-left: 5%;
+    height: 45vh;
+}
+
+.first-third-pilote, .second-third-pilote{
+    margin-bottom: 1rem;
+}
+
+.third-pilote h3{
+    color: #000;
+    font-size: 1.3rem;
+
+}
+
+.third-pilote li{
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.6rem;
+    margin-left: 0.5rem;
+}
+
+.img-constructeur{
+    height: 20vh;
+    width: 20vh;
+    aspect-ratio: 1/1;
+    margin: auto;
+}
+
+.mercedes{
+    background: url('img/mercedes.png') no-repeat center center / contain;
+}
+
+.main-desc-circuit{
+    margin-top: 7.6vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.main-desc-circuit p{
+    color: #000;
+}
+
+.first-circuit{
+    margin-bottom: 1rem;
+}
+
+.first-circuit h2{
+    color: #000;
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.img-circuit{
+    height: 30vh;
+    width: 100%;
+}
+
+.sakhir{
+    background: url('img/bahrein.png') no-repeat center center / contain;
+    margin: 0 auto;
+}
+
+.second-circuit{
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 1rem;
+}
+
+.second-circuit h3{
+    color: #000;
+    font-size: 1.3rem;
+}
+
+.second-circuit li{
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.6rem;
+    margin-left: 0.5rem;
+}
+
+.main-class-pilote{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.classement-pilote{
+    margin: 1rem 1rem 0;
+    display: grid;
+    grid-template-columns: 10% 20% 50% 20%;
+    text-align: center;
+    align-items: center;
+}
+
+.classement-pilote a{
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+}
+
+.btn-pilote-class {
+    height: 4rem;
+}
+
+.btn-pilote-class p{
+    font-size: 1.3rem;
+    color: #000;
+    padding-top: 0.5rem;
+}
+
+.btn-cons-class {
+    height: 4rem;
+}
+
+.btn-cons-class p{
+    font-size: 1.3rem;
+    color: #000;
+    padding-top: 1.2rem;
+}
+
+.class-img{
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    margin-left: 0.5rem;
+}
+
+.position,
+.points{
+    color: #000;
+}
+
+.points{
+    font-size: 1.2rem;
+}
+
+.position{
+    font-size: 1.5rem;
+}
+
+/*-----------------------------------
+                Footer
+------------------------------------*/
+footer{
+    display: flex;
+    justify-content: space-around;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    height: 3vh;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+}
+
+footer p, footer a{
+    font-size: 0.8rem;
+}
+
+/*-----------------------------------
+                KeyFrames
+------------------------------------*/
+@keyframes slidy {
+    0% { left: 0%; }
+    10%{ left: 0%; }
+    15%{ left: -100%; }
+    50%{ left: -100%; }
+    60%{ left: -200%; }
+    90% { left: -200%; }
+    100% { left: -300%; }
+}
+
+/*-----------------------------------
+            Media Queries
+------------------------------------*/
+@media all and (max-width:768px) {
+    .navbar__links { 
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      width:0;
+      height:calc(100vh - 65px);  
+      position:absolute;
+      top:4rem;
+      right:0;     
+      background:var(--navbar-bg-color);     
+      transform: translateX(110%);
+      transition: all .5s ease-in-out;
+    }
+    .show-nav .navbar__links { 
+      width:100%;    
+      transform: translateX(0);
+    } 
+    .navbar__link {    
+      transform: translateX(101%);
+      transition: all .5s ease-in-out;
+    }
+    .show-nav .navbar__link  {        
+      transform: translateX(0);    
+    }   
+    .navbar__link > a {
+      display:block;
+      padding:1rem;
+      font-size:1.6rem;
+      color:var(--navbar-color);  
+      transition: all .4s ease-in-out;
+    }
+    .navbar__link > a:hover {
+      padding-left:2rem;
+      letter-spacing:5px;
+    }
+    
+    /* Toggle menu */
+    .burger {
+      display:block;
+      position:relative;
+      padding:0;
+      width:45px;
+      height:45px;
+      border:none;
+      background:transparent;
+      cursor:pointer;
+    }
+    .bar {
+      display:block;    
+      width:40px;
+      height:2px;  
+      border-radius:3px;
+      background:var(--navbar-color); 
+      transition: all .5s ease-in-out;   
+    }
+    .bar::before, .bar::after {
+      content:"";
+      width:40px;
+      height:2px;
+      position:absolute; 
+      left:0;  
+      background:var(--navbar-color); 
+      border-radius:3px;    
+      transition: all .5s ease-in-out;
+    }
+    .bar::before {
+      transform:translateY(-12px)
+    }
+    .bar::after {
+      transform:translateY(12px)
+    }
+    .show-nav .bar {
+      width:0;
+      background:transparent;    
+    }
+    .show-nav .bar::before {
+      transform:rotate(45deg);
+    }
+    .show-nav .bar::after {
+      transform:rotate(-45deg);
+    }
+    
+    /* Animations */
+    .show-nav .first {      
+      transition: all 1s ease-out;
+    } 
+    .show-nav .second {      
+      transition: all 1.1s ease-out;
+    } 
+    .show-nav .third {      
+      transition: all 1.2s ease-out;
+    } 
+    .show-nav .four {      
+      transition: all 1.3s ease-out;
+    } 
+    .show-nav .fifth {      
+      transition: all 1.4s ease-out;
+    }
+  }
+  
+  /*  Medium device - Bonus */
+  @media screen and (min-width:768px) {
+    .navbar__link > a::after {
+      display:block;
+      content:"";
+      width:0;
+      height:1px;
+      background:var(--navbar-color);
+      transition: width .4s;
+    }
+    .navbar__link:hover > a::after {
+      width:100%;
+    }
+  }
+
+/*-----------------------------------
+                END CSS
+------------------------------------*/  

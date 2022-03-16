@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <meta name="author" content="Clément Lazzarini">
+
+    <!-- To Modify -->
+    <title>Ecuries - F1 2022</title>
+    <meta name="description" content="Découvrez toutes les infos de la formule 1!">
+
+
+    <!-- Social Meta to Modify -->
+    <meta property="og:title" content="Titre_de_la_page">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.sitepoint.com/a-basic-html5-template/">
+    <meta property="og:description" content="Il s'agit d'une simple description de la page web.">
+    <meta property="og:image" content="image.png">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar dark-mode" role="navigation">
+            <div></div>
+            <a href="index.html"  class="navbar__logo"><div class="title">Formule 1</br>2022</div></a>    
+            <ul class="navbar__links">
+              <li class="navbar__link first"><a href="index.html">Accueil</a></li>
+              <li class="navbar__link second"><a href="pilotes.html">Pilotes</a></li>
+              <li class="navbar__link third"><a href="ecuries.html">Ecuries</a></li>
+              <li class="navbar__link four"><a href="circuits.html">Circuits</a></li>
+              <li class="navbar__link fifth"><a href="classements.html">Classements</a></li>
+            </ul>   
+            <button class="burger">
+              <span class="bar"></span>  
+            </button>   
+          </nav>
+    </header>
+    <main class="main-pilotes">
+        <a href="sakhir.html">
+            <div class="button-pilotes circuit-btn">
+                <p>Sakhir</p>
+            </div>
+        </a>
+        <a href="#">
+            <div class="button-pilotes circuit-btn">
+                <p>Djeddah</p>
+            </div>
+        </a>
+        <a href="#">
+            <div class="button-pilotes circuit-btn">
+                <p>Melbourne</p>
+            </div>
+        </a>
+        <a href="#">
+            <div class="button-pilotes circuit-btn">
+                <p>Imola</p>
+            </div>
+        </a>
+        <a href="#">
+            <div class="button-pilotes circuit-btn">
+                <p>Miami</p>
+            </div>
+        </a>
+        <a href="#">
+            <div class="button-pilotes circuit-btn">
+                <p>Barcelone</p>
+            </div>
+        </a>
+        <a href="#">
+            <div class="button-pilotes circuit-btn">
+                <p>Monaco</p>
+            </div>
+        </a>
+        <a href="#">
+            <div class="button-pilotes circuit-btn">
+                <p>Bakou</p>
+            </div>
+        </a>
+        <a href="#">
+            <div class="button-pilotes circuit-btn">
+                <p>Montréal</p>
+            </div>
+        </a>
+        <a href="#">
+            <div class="button-pilotes circuit-btn">
+                <p>Silverstone</p>
+            </div>
+        </a>
+        <a href="#">
+            <div class="button-pilotes circuit-btn">
+                <p>Spielberg</p>
+            </div>
+        </a>
+        <a href="#">
+            <div class="button-pilotes circuit-btn">
+                <p>Le Castellet</p>
+            </div>
+        </a>
+        <a href="#">
+            <div class="button-pilotes circuit-btn">
+                <p>Budapest</p>
+            </div>
+        </a>
+        <a href="#">
+            <div class="button-pilotes circuit-btn">
+                <p>Spa-Francorchamps</p>
+            </div>
+        </a>
+        <a href="#">
+            <div class="button-pilotes circuit-btn">
+                <p>Zandvoort</p>
+            </div>
+        </a>
+        <a href="#">
+            <div class="button-pilotes circuit-btn">
+                <p>Monza</p>
+            </div>
+        </a>
+        <a href="#">
+            <div class="button-pilotes circuit-btn">
+                <p>Sotchi</p>
+            </div>
+        </a>
+        <a href="#">
+            <div class="button-pilotes circuit-btn">
+                <p>Singapour</p>
+            </div>
+        </a>
+        <a href="#">
+            <div class="button-pilotes circuit-btn">
+                <p>Suzuka</p>
+            </div>
+        </a>
+        <a href="#">
+            <div class="button-pilotes circuit-btn">
+                <p>Austin</p>
+            </div>
+        </a>
+        <a href="#">
+            <div class="button-pilotes circuit-btn">
+                <p>Mexico</p>
+            </div>
+        </a>
+        <a href="#">
+            <div class="button-pilotes circuit-btn">
+                <p>Interlagos</p>
+            </div>
+        </a>
+        <a href="#">
+            <div class="button-pilotes circuit-btn">
+                <p>Abu Dhabi</p>
+            </div>
+        </a>
+    </main>
+    <footer>
+        <p>Créé par Clément Lazzarini</p>
+        <a href="#">Help & Infos</a>
+    </footer>
+    <script defer>
+        function toggleMenu () {  
+          const navbar = document.querySelector('.navbar');
+          const burger = document.querySelector('.burger');
+          burger.addEventListener('click', (e) => {    
+          navbar.classList.toggle('show-nav');
+          });    
+        }
+        toggleMenu();
+      </script>
+</body>
+</html>
